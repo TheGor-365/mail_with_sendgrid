@@ -12,6 +12,20 @@
   </head>
 
   <body>
+    <%= toastr_flash %>
+
+    <% if notice.present? %>
+      <div class="container alert alert-success">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div class="container alert alert-danger">
+        <%= alert %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
