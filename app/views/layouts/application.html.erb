@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MailWithSendgrid</title>
+    <title>Mail With Sendgrid</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,6 +13,7 @@
 
   <body>
     <%= toastr_flash %>
+    <%= render 'layouts/nav' %>
 
     <% if notice.present? %>
       <div class="container alert alert-success">
@@ -26,6 +27,10 @@
       </div>
     <% end %>
 
-    <%= yield %>
+    <div class="container mt-5 mb-5">
+
+      <%= yield %>
+    </div>
+
   </body>
 </html>
